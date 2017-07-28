@@ -1,0 +1,5 @@
+driver: 'pdo_mysql'
+host: 'localhost'
+dbname: 'test'
+user: 'test'
+password: '123'

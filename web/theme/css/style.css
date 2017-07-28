@@ -1,0 +1,16 @@
+.app-scrollable {
+    overflow: hidden;
+}
+
+.glyphicon-remove, .glyphicon-heart {
+    cursor: pointer;
+}
+
+#loading {
+    display: none;
+}
+
+.img-thumbnail {
+    max-width: 600px;
+    max-height: 400px;
+}

@@ -1,0 +1,23 @@
+UWTest\Entity\Message:
+  type: entity
+  manyToOne:
+    user:
+      targetEntity: User
+      inversedBy: messages
+  oneToMany:
+    like_given:
+      targetEntity: LikeGiven
+      mappedBy: message
+  table: message
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    message:
+      type: text
+    created_at:
+      type: datetime
+      column: created_at
+      nullable: false

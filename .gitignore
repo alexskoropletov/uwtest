@@ -1,0 +1,5 @@
+vendor
+.idea
+web/theme/css/bootstrap.min.css
+web/theme/js/bootstrap.min.js
+web/theme/js/jquery.min.js

@@ -1,0 +1,17 @@
+{
+    "name": "alexskoropletov/uwtest",
+    "description": "UW test app",
+    "require": {
+        "twbs/bootstrap": "^3",
+        "components/jquery": "^3.2",
+        "twig/twig": "^2",
+        "doctrine/orm": "^2",
+        "symfony/yaml": "^3"
+    },
+    "authors": [
+        {
+            "name": "Aleksandr Skoropletov",
+            "email": "alex@skoropletov.ru"
+        }
+    ]
+}

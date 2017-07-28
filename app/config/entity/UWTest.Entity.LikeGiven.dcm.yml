@@ -1,0 +1,21 @@
+UWTest\Entity\LikeGiven:
+  type: entity
+  table: like_given
+  manyToOne:
+    user:
+      targetEntity: User
+      inversedBy: like_given
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
+    message:
+      targetEntity: Message
+      inversedBy: like_given
+      joinColumn:
+        name: message_id
+        referencedColumnName: id
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO

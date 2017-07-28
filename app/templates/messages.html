@@ -1,0 +1,27 @@
+<div class="well well-sm app-scrollable" id="chat-log">
+    {% for message in messages %}
+        <div class="row message" data-message-id="{{ message.id() }}">
+            <div class="col-md-2 no-float">
+                <small>{{ message.createdAt().format('Y.m.d H:i') }}</small><br>
+                <b>
+                    {% if message.user().id() == user.id() %}
+                        <a data-toggle="modal" data-target="#user-rename">
+                    {% endif %}
+                        {{ message.user().name() }}
+                    {% if message.user().id() == user.id() %}
+                        </a>
+                    {% endif %}
+                </b>
+            </div>
+            <div class="col-md-8 no-float">{{ message.message()|links }}</div>
+            <div class="col-md-2 no-float">
+                {% if message.user().id() == user.id() %}
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                {% else %}
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                {% endif %}
+                <span class="label label-default">{{ message.likeGiven().count() }}</span>
+            </div>
+        </div>
+    {% endfor %}
+</div>
